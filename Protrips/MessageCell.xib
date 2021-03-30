@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="49" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Protrips" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YXc-fX-ztB">
+                        <rect key="frame" x="10" y="10" width="306" height="29"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="3q7-P7-1of">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1L2-qf-VYj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoN-oB-JMk">
+                                <rect key="frame" x="54" y="0.0" width="198" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDZ-BS-edd">
+                                        <rect key="frame" x="8" y="10" width="182" height="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.60186046360000001" green="0.77024036650000005" blue="0.95688349009999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XDZ-BS-edd" secondAttribute="trailing" constant="8" id="0Jh-ox-0VY"/>
+                                    <constraint firstItem="XDZ-BS-edd" firstAttribute="top" secondItem="JoN-oB-JMk" secondAttribute="top" constant="10" id="0Lx-ol-6Ju"/>
+                                    <constraint firstAttribute="bottom" secondItem="XDZ-BS-edd" secondAttribute="bottom" constant="8" id="KoC-6o-YYp"/>
+                                    <constraint firstItem="XDZ-BS-edd" firstAttribute="leading" secondItem="JoN-oB-JMk" secondAttribute="leading" constant="8" id="YAE-cC-ew1"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male" translatesAutoresizingMaskIntoConstraints="NO" id="Xo6-8o-lQY">
+                                <rect key="frame" x="260" y="0.0" width="46" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Mx4-k7-dAT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="YXc-fX-ztB" secondAttribute="bottom" constant="10" id="Hfy-Nw-tWE"/>
+                    <constraint firstItem="YXc-fX-ztB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Jx3-jl-n9g"/>
+                    <constraint firstAttribute="trailing" secondItem="YXc-fX-ztB" secondAttribute="trailing" constant="10" id="ng6-uF-IPs"/>
+                    <constraint firstItem="YXc-fX-ztB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tCx-pC-dXR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="XDZ-BS-edd" id="nFX-k6-3OM"/>
+                <outlet property="leftImageView" destination="3q7-P7-1of" id="s9B-vD-0cu"/>
+                <outlet property="messageBubble" destination="JoN-oB-JMk" id="2lb-zp-g02"/>
+                <outlet property="rightImageView" destination="Xo6-8o-lQY" id="Vtk-Pl-N2h"/>
+            </connections>
+            <point key="canvasLocation" x="159.42028985507247" y="71.316964285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="female" width="150" height="150"/>
+        <image name="male" width="150" height="150"/>
+    </resources>
+</document>

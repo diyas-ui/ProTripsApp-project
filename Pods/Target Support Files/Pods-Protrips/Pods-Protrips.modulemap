@@ -1,0 +1,6 @@
+framework module Pods_Protrips {
+  umbrella header "Pods-Protrips-umbrella.h"
+
+  export *
+  module * { export * }
+}
